@@ -2205,7 +2205,7 @@ expo-font-interface@~2.0.0:
   dependencies:
     expo-core "~2.0.0"
 
-expo-font@~2.0.0:
+expo-font@^2.0.0, expo-font@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-2.0.0.tgz#0b1e21084a678ddb7fafd16a4b02dcd9bb325963"
   integrity sha512-0o79ON0aQQCcA3OXXnRllGGnFFfDXXe2QB/IIGrksD5UL8MPwhLWAsD3ZsZJYgo3H6tE/i8moB2zQ1i2Q/4pNg==
