@@ -1,11 +1,60 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
+import {Text, View, ScrollView } from 'react-native';
+import { Card, Button } from 'react-native-elements';
+import { FontAwesome } from '@expo/vector-icons';
+import * as Animatable from 'react-native-animatable';
+import { MailComposer } from 'expo';
 
-export default class Contact extends Component {
-  render() {
-    return (
-      <Card title="Contact">
-        <Text>Contact Component</Text>        
-      </Card>
-    );
+class Contact extends Component {
+    constructor(props){
+      super(props);   
+    }
+    static navigationOptions = {
+      title: 'Contact Us'
+    };
+    sendMail() {      
+      MailComposer.composeAsync({
+          recipients: ['confusion@food.net'],
+          subject: 'Enquiry',
+          body: 'To whom it may concern:'
+      })
+    }
+    render() {
+      return (
+        <View>
+          <ScrollView>
+            <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
+              <Card
+                title='Contact Information'>
+                <Text style={{margin:10}}>
+                  121, Clear Water Bay Road
+                </Text>
+                <Text style={{margin:10}}>
+                  Clear Water Bay, Kowloon
+                </Text>
+                <Text style={{margin:10}}>
+                  HONG KONG
+                </Text>
+                <Text style={{margin:10}}>
+                  Tel: +852 1234 5678
+                </Text>
+                <Text style={{margin:10}}>
+                  Fax: +852 8765 4321
+                </Text>
+                <Text style={{margin:10}}>
+                  Email:confusion@food.net
+                </Text>
+                <Button
+                    title="Send Email"
+                    buttonStyle={{backgroundColor: "#512DA8"}}
+                    icon={<FontAwesome name="envelope-o" color="white" />}                    
+                    onPress={this.sendMail}
+                />
+              </Card>
+            </Animatable.View>
+          </ScrollView>
+      </View>   
+    )
   }
 }
+export default Contact;
