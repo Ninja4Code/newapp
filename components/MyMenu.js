@@ -23,7 +23,7 @@ const FavoritesNavigator = createStackNavigator({
        color: "#fff"            
      },
      headerTintColor: "#fff",
-     headerLeft: <FontAwesome name="menu" size={24}
+     headerLeft: <FontAwesome name="navicon" size={24}
        iconStyle={{ color: 'white' }} 
        onPress={ () => navigation.toggleDrawer() } />    
   })
@@ -40,7 +40,7 @@ const ReservationNavigator = createStackNavigator({
        color: "#fff"            
      },
      headerTintColor: "#fff",
-     headerLeft: <FontAwesome name="menu" size={24}
+     headerLeft: <FontAwesome name="navicon" size={24}
        iconStyle={{ color: 'white' }} 
        onPress={ () => navigation.toggleDrawer() } />    
  })
@@ -57,7 +57,7 @@ const AboutNavigator = createStackNavigator({
        color: "#fff"            
      },
      headerTintColor: "#fff",
-     headerLeft: <FontAwesome name='menu' size={24} color='white'
+     headerLeft: <FontAwesome name='navicon' size={24} color='white'
        onPress={()=> navigation.toggleDrawer()}
       />
    })  
@@ -74,7 +74,7 @@ navigationOptions: ({ navigation }) => ({
   },
   title: 'Login',
   headerTintColor: "#fff",
-  headerLeft: <FontAwesome name="menu" size={24}
+  headerLeft: <FontAwesome name="navicon" size={24}
     iconStyle={{ color: 'white' }} 
     onPress={ () => navigation.toggleDrawer() } />    
 })
@@ -91,7 +91,7 @@ const ContactNavigator = createStackNavigator({
        color: "#fff"            
      },
      headerTintColor: "#fff",
-     headerLeft: <FontAwesome name='menu' size={24} color='white'
+     headerLeft: <FontAwesome name='navicon' size={24} color='white'
        onPress={()=> navigation.toggleDrawer()}
       />
    })  
@@ -99,7 +99,7 @@ const ContactNavigator = createStackNavigator({
 const MenuNavigator = createStackNavigator({
    Menu: { screen: Menu,
      navigationOptions:({navigation }) => ({
-       headerLeft: <FontAwesome name='menu' size={24} color='white'
+       headerLeft: <FontAwesome name='navicon' size={24} color='white'
        onPress={()=> navigation.toggleDrawer()}
       />
      })
@@ -131,7 +131,7 @@ const HomeNavigator = createStackNavigator({
        color: "#fff"            
      },
      headerTintColor: "#fff" ,
-     headerLeft: <FontAwesome name='menu' size={24} color='white'
+     headerLeft: <FontAwesome name='navicon' size={24} color='white'
        onPress={()=> navigation.toggleDrawer()}
       />
    })  
