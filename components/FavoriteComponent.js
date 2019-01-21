@@ -60,8 +60,7 @@ class Favorites extends Component {
                             subtitle={item.description}
                             hideChevron={true}
                             onPress={() => navigate('Dishdetail', { dishId: item.id })}
-                            avatar={<Image resizeMode='cover' borderRadius={15} style={{ height:30, width:30}} 
-                                source={{uri: baseUrl + item.image}}/>}
+                            leftAvatar={{ source: { uri: baseUrl + item.image } }}
                         />
                     </Animatable.View>
                 </Swipeout>                
