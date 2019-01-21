@@ -32,7 +32,7 @@ class LoginTab extends Component {
         title: 'Login',
         tabBarIcon: ({ tintColor }) => (
             <FontAwesome
-              name='sign-in'              
+              name='sign-in' size={24}             
               iconStyle={{ color: tintColor }}
             />
           ) 
@@ -51,14 +51,14 @@ class LoginTab extends Component {
             <View style={styles.container}>
                 <Input
                     placeholder="Username"
-                    leftIcon={<FontAwesome name="user-o" />}
+                    leftIcon={<FontAwesome name="user-o" size={24} />}
                     onChangeText={(username) => this.setState({username})}
                     value={this.state.username}
                     containerStyle={styles.formInput}
                     />
                 <Input
                     placeholder="Password"
-                    leftIcon={<FontAwesome name="key" />}
+                    leftIcon={<FontAwesome name="key" size={24} />}
                     onChangeText={(password) => this.setState({password})}
                     value={this.state.password}
                     containerStyle={styles.formInput}
@@ -177,35 +177,35 @@ class RegisterTab extends Component {
                 </View>                
                 <Input
                     placeholder="Username"
-                    leftIcon={<FontAwesome name="user-o" />}
+                    leftIcon={<FontAwesome name="user-o" size={24} />}
                     onChangeText={(username) => this.setState({username})}
                     value={this.state.username}
                     containerStyle={styles.formInput}
                     />                
                 <Input
                     placeholder="Password"
-                    leftIcon={<FontAwesome name="key" />}
+                    leftIcon={<FontAwesome name="key" size={24} />}
                     onChangeText={(password) => this.setState({password})}
                     value={this.state.password}
                     containerStyle={styles.formInput}
                     />                
                 <Input
                     placeholder="First Name"
-                    leftIcon={<FontAwesome name="user-o" />}
+                    leftIcon={<FontAwesome name="user-o" size={24} />}
                     onChangeText={(firstname) => this.setState({firstname})}
                     value={this.state.firstname}
                     containerStyle={styles.formInput}
                     />
                 <Input
                     placeholder="Last Name"
-                    leftIcon={<FontAwesome name="user-o" />}
+                    leftIcon={<FontAwesome name="user-o" size={24} />}
                     onChangeText={(lastname) => this.setState({lastname})}
                     value={this.state.lastname}
                     containerStyle={styles.formInput}
                     />
                 <Input
                     placeholder="Email"
-                    leftIcon={<FontAwesome name="enveloper-o"/>}
+                    leftIcon={<FontAwesome name="enveloper-o" size={24}/>}
                     onChangeText={(email) => this.setState({email})}
                     value={this.state.email}
                     containerStyle={styles.formInput}

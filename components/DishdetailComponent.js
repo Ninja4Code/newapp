@@ -75,6 +75,7 @@ function RenderDish(props) {
                             <FontAwesome
                                 raised
                                 reverse
+                                size={24}
                                 name={ props.favorite ? 'heart' : 'heart-o'}
                                 color='#f50'
                                 style={{flex: 1}}
@@ -83,6 +84,7 @@ function RenderDish(props) {
                             <FontAwesome
                                 raised
                                 reverse
+                                size={24}
                                 name='pencil'                                
                                 color='#512da7'
                                 style={{flex: 1}}
@@ -182,12 +184,12 @@ class DishDetail extends Component {
                         />
                         <Input
                             placeholder="Author"
-                            leftIcon={<FontAwesome name="user-o" />}
+                            leftIcon={<FontAwesome name="user-o" size={24} />}
                             onChangeText={ author => this.setState({ author: author })}
                         />
                         <Input
                             placeholder="Comment"
-                            leftIcon={<FontAwesome name="comment-o" />}
+                            leftIcon={<FontAwesome name="comment-o" size={24} />}
                             onChangeText={ comment => this.setState({ comment: comment })}
                         />
                         <View style={{ marginBottom: 20, marginTop: 20}}>
