@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Button, StyleSheet, ScrollView, Image } from 'react-native';
-import { Input, CheckBox } from 'react-native-elements';
+import { View, Button, StyleSheet, ScrollView, Image, Switch } from 'react-native';
+import { Input } from 'react-native-elements';
 import { FontAwesome } from '@expo/vector-icons';
 import { SecureStore,  Permissions, ImagePicker, ImageManipulator  } from 'expo';
 import { createBottomTabNavigator } from 'react-navigation';
@@ -63,11 +63,10 @@ class LoginTab extends Component {
                     value={this.state.password}
                     containerStyle={styles.formInput}
                     />
-                <CheckBox title="Remember Me"
-                    center
-                    checked={this.state.remember}
-                    onPress={() => this.setState({remember: !this.state.remember})}
-                    containerStyle={styles.formCheckbox}
+                <Switch
+                    value={this.state.remember}
+                    onValueChange={(value) => this.setState({remember: !this.state.remember})}
+                    
                     />
                 <View style={styles.formButton}>                    
                     <Button
@@ -106,15 +105,16 @@ class RegisterTab extends Component {
         }
     }
     processImage = async (imageUri) => {
-        let processedImage = await ImageManipulator.manipulate(
+       /*  let processedImage = await ImageManipulator.manipulate(
             imageUri, 
             [
                 {resize: {width: 400}}
             ],
             {format: 'png'}
-        );
-        console.log(processedImage);
-        this.setState({imageUrl: processedImage.uri });
+        ); */
+       // console.log(processedImage);
+       // this.setState({imageUrl: processedImage.uri });
+        this.setState({imageUrl: imageUri });
     }
     getImageFromGallery = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -210,11 +210,9 @@ class RegisterTab extends Component {
                     value={this.state.email}
                     containerStyle={styles.formInput}
                     />
-                <CheckBox title="Remember Me"
-                    center
-                    checked={this.state.remember}
-                    onPress={() => this.setState({remember: !this.state.remember})}
-                    containerStyle={styles.formCheckbox}
+                <Switch 
+                    value={this.state.remember}
+                    onValueChange={(value) => this.setState({remember: !this.state.remember})}                    
                     />
                 <View style={styles.formButton}>
                     <Button
