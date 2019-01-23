@@ -12,13 +12,13 @@ const mapDispatchToProps = dispatch => ({
    fetchLeaders:() => dispatch(fetchLeaders()),
    fetchDishes:() => dispatch(fetchDishes()),
    fetchPromos:() => dispatch(fetchPromos()),
-   fetchComments:() => dispatch(fetchComments())
+  // fetchComments:() => dispatch(fetchComments())
 });
 class Main extends Component {
   
   componentDidMount() {
     this.props.fetchLeaders();
-    this.props.fetchComments();
+   // this.props.fetchComments();
     this.props.fetchDishes();
     this.props.fetchPromos();
 
