@@ -205,7 +205,7 @@ class RegisterTab extends Component {
                     />
                 <Input
                     placeholder="Email"
-                    leftIcon={<FontAwesome name="enveloper-o" size={24}/>}
+                    leftIcon={<FontAwesome name="envelope-o" size={24}/>}
                     onChangeText={(email) => this.setState({email})}
                     value={this.state.email}
                     containerStyle={styles.formInput}
