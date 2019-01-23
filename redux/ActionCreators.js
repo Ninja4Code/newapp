@@ -128,9 +128,9 @@ export const addLeaders = (leaders) => ({
     payload: leaders
 });
 export const postFavorite = (dishId)  => (dispatch) => {
-    setTimeout(() => {
+   // setTimeout(() => {
         dispatch(addFavorite(dishId));
-    }, 2000);
+   // }, 2000);
 };
 export const addFavorite = (dishId) => ({
     type: ActionTypes.ADD_FAVORITE,
@@ -174,9 +174,10 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
             throw error;
       })
     .then(response => response.json())
-    .then(response => setTimeout(() => {
+    /* .then(response => setTimeout(() => {
         dispatch(addComment(response));
-        }, 2000))
+        }, 2000)) */
+    .then(response => dispatch(addComment(response)))          
     .catch(error =>  { console.log('post comments', error.message); alert('Your comment could not be posted\nError: '+error.message); });
 };
 export const deleteFavorite = (dishId) => ({

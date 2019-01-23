@@ -22,18 +22,18 @@ class Main extends Component {
     this.props.fetchDishes();
     this.props.fetchPromos();
 
-    NetInfo.getConnectionInfo()
+   /*  NetInfo.getConnectionInfo()
         .then((connectionInfo) => {
             ToastAndroid.show('Initial Network Connectivity Type: '
                 + connectionInfo.type + ', effectiveType: ' + connectionInfo.effectiveType,
                 ToastAndroid.LONG)
         });
 
-    NetInfo.addEventListener('connectionChange', this.handleConnectivityChange);
+    NetInfo.addEventListener('connectionChange', this.handleConnectivityChange); */
   }
-  componentWillUnmount() {
+  /* componentWillUnmount() {
     NetInfo.removeEventListener('connectionChange', this.handleConnectivityChange);
-  }
+  } */
   handleConnectivityChange = (connectionInfo) => {
     switch (connectionInfo.type) {
       case 'none':
