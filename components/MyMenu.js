@@ -24,7 +24,7 @@ const FavoritesNavigator = createStackNavigator({
      },
      headerTintColor: "#fff",
      headerLeft: <FontAwesome name="navicon" size={24}
-       iconStyle={{ color: 'white' }} 
+       color= 'white'
        onPress={ () => navigation.toggleDrawer() } />    
   })
 })
@@ -41,7 +41,7 @@ const ReservationNavigator = createStackNavigator({
      },
      headerTintColor: "#fff",
      headerLeft: <FontAwesome name="navicon" size={24}
-       iconStyle={{ color: 'white' }} 
+       color = 'white' 
        onPress={ () => navigation.toggleDrawer() } />    
  })
 })
@@ -75,7 +75,7 @@ navigationOptions: ({ navigation }) => ({
   title: 'Login',
   headerTintColor: "#fff",
   headerLeft: <FontAwesome name="navicon" size={24}
-    iconStyle={{ color: 'white' }} 
+    color = 'white' 
     onPress={ () => navigation.toggleDrawer() } />    
 })
 });
