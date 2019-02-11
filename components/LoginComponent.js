@@ -55,7 +55,9 @@ class LoginTab extends Component {
                     onChangeText={(username) => this.setState({username})}
                     value={this.state.username}
                     containerStyle={styles.formInput}
-                    inputContainerStyle={{borderRadius:'10',backgroundColor:'white',borderBottomColor:'white'}}
+                    inputContainerStyle={{borderRadius:10,
+                        backgroundColor:'white',
+                        borderBottomColor:'white'}}
                     />
                 <Input
                     placeholder="Password"
